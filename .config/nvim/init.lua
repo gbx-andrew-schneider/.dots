@@ -687,7 +687,7 @@ require('lazy').setup({
         'lua-language-server', -- Lua Language server
         'stylua', -- Used to format Lua code
         'bash-language-server',
-        'json-lsp',
+        -- 'json-lsp',
         'yaml-language-server',
         -- You can add other tools here that you want Mason to install
       })
@@ -698,10 +698,16 @@ require('lazy').setup({
         ['bashls'] = {
           filetypes = { 'bash', 'sh', 'zsh' },
         },
-        ['jsonls'] = {
-          filetypes = { 'json', 'jsonc' },
+        -- ['jsonls'] = {
+        --   filetypes = { 'json', 'jsonc' },
+        -- },
+        ['yamlls'] = {
+          settings = {
+            yaml = {
+              customTags = { '!reference sequence' },
+            },
+          },
         },
-        ['yamlls'] = {},
       })
 
       for name, server in pairs(servers) do
