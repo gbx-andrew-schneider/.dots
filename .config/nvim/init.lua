@@ -421,7 +421,7 @@ require('lazy').setup({
       vim.keymap.set('n', '<leader>sc', builtin.commands, { desc = '[S]earch [C]ommands' })
       vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
 
-      vim.keymap.set('i', 'jj', '<Esc>')
+      -- vim.keymap.set('i', 'jj', '<Esc>')
 
       local is_inside_work_tree = {}
       vim.keymap.set('n', '<leader>sf', function()
